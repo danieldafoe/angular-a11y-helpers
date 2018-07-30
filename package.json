@@ -1,10 +1,11 @@
 {
   "name": "dd-a11y",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build --prod angular-a11y-helpers",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
