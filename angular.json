@@ -125,7 +125,47 @@
           }
         }
       }
+    },
+    "angular-a11y-helpers": {
+      "root": "projects/angular-a11y-helpers",
+      "sourceRoot": "projects/angular-a11y-helpers/src",
+      "projectType": "library",
+      "prefix": "aah",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-a11y-helpers/tsconfig.lib.json",
+            "project": "projects/angular-a11y-helpers/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-a11y-helpers/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-a11y-helpers/src/test.ts",
+            "tsConfig": "projects/angular-a11y-helpers/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-a11y-helpers/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-a11y-helpers/tsconfig.lib.json",
+              "projects/angular-a11y-helpers/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "dd-a11y"
+  "defaultProject": "angular-a11y-helpers"
 }
