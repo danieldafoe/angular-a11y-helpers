@@ -9,7 +9,9 @@
     "test": "ng test",
     "test:lib": "ng test angular-a11y-helpers",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pack:lib": "cd dist/angular-a11y-helpers && npm pack",
+    "package": "npm run test:lib && npm run build:lib && npm run pack:lib"
   },
   "private": true,
   "dependencies": {
