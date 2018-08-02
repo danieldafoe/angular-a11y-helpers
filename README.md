@@ -1,27 +1,21 @@
-# DdA11y
+# angular-a11y-helpers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Usage
 
-## Development server
+`npm install angular-a11y-helpers`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Directives
 
-## Code scaffolding
+### [FocusFirst]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Type:** Attribute
 
-## Build
+**Description:** When using native routing capabilities in Angular, applying the `aahFocusFirst` directive to an element will ensure that that element becomes focused when that particular view is initialized.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Attaching this directive to an element that is already part of the tab order does not affect its initial tabindex.
 
-## Running unit tests
+#### Use
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This is particularly useful when routing between full page views. Choosing an element that would give context to this new view is a good approach. This is useful for those using assistive technology to navigate the web. One of the first element's in the DOM (like a global nav) or the page's `<h1>` are good choices.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_Only one element should receive this directive per view._
