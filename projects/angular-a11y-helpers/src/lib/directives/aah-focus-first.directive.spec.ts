@@ -8,21 +8,55 @@ import { By } from '@angular/platform-browser';
 })
 class TestComponent { }
 
+@Component({
+  template: `<button aahFocusFirst>Focus This Without Setting Tabindex</button>`
+})
+class ElementWithTabOrderComponent { }
+
+let fixture;
+let headingEl: HTMLElement;
+let buttonEl: HTMLElement;
+
+beforeEach(() => {
+
+});
+
 describe('AahFocusFirstDirective', () => {
-  it('should focus the attached-to element after the view is initialized', () => {
-    // Setup
-    const fixture = TestBed.configureTestingModule({
+  it('should set the tabindex of an element with no initial tabindex to -1', () => {
+    fixture = TestBed.configureTestingModule({
       declarations: [AahFocusFirstDirective, TestComponent]
     })
     .createComponent(TestComponent);
 
-    const headingEl: HTMLElement = fixture.nativeElement.querySelector('h2');
+    headingEl = fixture.nativeElement.querySelector('h2');
+
+    fixture.detectChanges();
+    expect(headingEl.tabIndex).toEqual(-1);
+  });
+
+  it('should not set the tabindex of an element that already has one', () => {
+    fixture = TestBed.configureTestingModule({
+      declarations: [AahFocusFirstDirective, ElementWithTabOrderComponent]
+    })
+    .createComponent(ElementWithTabOrderComponent);
+
+    buttonEl = fixture.nativeElement.querySelector('button');
+    const buttonElInitialTabindex = buttonEl.tabIndex;
+
+    fixture.detectChanges();
+    expect(buttonEl.tabIndex).toBe(buttonElInitialTabindex);
+  });
+
+  it('should focus the attached-to element after the view is initialized', () => {
+    fixture = TestBed.configureTestingModule({
+      declarations: [AahFocusFirstDirective, TestComponent]
+    })
+    .createComponent(TestComponent);
+
+    headingEl = fixture.nativeElement.querySelector('h2');
     const focus = spyOn(headingEl, 'focus');
 
-    // Detect
     fixture.detectChanges();
-
-    // Expect
     expect(focus).toHaveBeenCalled();
   });
 });
