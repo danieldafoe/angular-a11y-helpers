@@ -7,7 +7,7 @@
     "build": "ng build",
     "build:lib": "ng build --prod angular-a11y-helpers",
     "test": "ng test",
-    "test:lib": "ng test angular-a11y-helpers",
+    "test:lib": "ng test --watch=false angular-a11y-helpers",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pack:lib": "cd dist/angular-a11y-helpers && npm pack",
