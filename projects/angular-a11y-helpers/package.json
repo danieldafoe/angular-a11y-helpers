@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "Helpful directives and components that improve accessibility in Angular applications.",
   "scripts": {
-    "test": "karma start"
+    "build": "ng build --prod angular-a11y-helpers",
+    "pack": "cd ./dist/angular-a11y-helpers && npm pack",
+    "package": "npm run test:once && npm run build && npm run pack",
+    "test": "ng test angular-a11y-helpers",
+    "test:once": "ng test --watch=false angular-a11y-helpers"
   },
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
