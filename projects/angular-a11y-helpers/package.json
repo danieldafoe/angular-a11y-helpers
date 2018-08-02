@@ -2,6 +2,14 @@
   "name": "angular-a11y-helpers",
   "version": "0.1.0",
   "description": "Helpful directives and components that improve accessibility in Angular applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danieldafoe/angular-a11y-helpers.git"
+  },
+  "homepage": "https://github.com/danieldafoe/angular-a11y-helpers#readme",
+  "bugs": "https://github.com/danieldafoe/angular-a11y-helpers/issues",
+  "license": "MIT",
+  "author": "Daniel Dafoe <dannydafoe@gmail.com> (http://danieldafoe.github.io)",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
