@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+$colours: (
+  'black': #000,
+  'grey-100': #f3f4f5,
+  'grey-600': #333,
+  'white': #fff
+);
+
+body {
+  background-color: map-get($colours, 'grey-100');
+  font-family: sans-serif;
+}
+
+main {
+  margin: 2rem auto 0;
+  max-width: 50vw;
+}
+
+h1 {
+  color: map-get($colours, 'grey-600');
+  margin: 0 0 2rem;
+}
