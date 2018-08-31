@@ -1,4 +1,4 @@
-import { AahFocusFirstDirective } from './aah-focus-first.directive';
+import { AahFocusFirstDirective } from './focus-first.directive';
 import { Component, DebugElement } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -16,10 +16,6 @@ class ElementWithTabOrderComponent { }
 let fixture;
 let headingEl: HTMLElement;
 let buttonEl: HTMLElement;
-
-beforeEach(() => {
-
-});
 
 describe('AahFocusFirstDirective', () => {
   it('should set the tabindex of an element with no initial tabindex to -1', () => {
