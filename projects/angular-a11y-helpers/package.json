@@ -1,7 +1,16 @@
 {
   "name": "angular-a11y-helpers",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Helpful directives and components that improve accessibility in Angular applications.",
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "inclusive",
+    "angular",
+    "angular a11y",
+    "components",
+    "ng a11y"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/danieldafoe/angular-a11y-helpers.git"
