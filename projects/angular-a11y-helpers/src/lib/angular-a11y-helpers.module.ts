@@ -1,9 +1,20 @@
 import { NgModule } from '@angular/core';
-import { AahFocusFirstDirective } from './directives/aah-focus-first.directive';
+// import { BrowserModule } from '@angular/platform-browser';
+// import { CommonModule } from '@angular/common';
+
+import { AahFocusFirstDirective } from './directives/focus-first.directive';
+import { AahAnnouncerComponent } from './components/announcer/announcer.component';
 
 @NgModule({
   imports: [],
-  declarations: [AahFocusFirstDirective],
-  exports: [AahFocusFirstDirective]
+  declarations: [
+    AahFocusFirstDirective,
+    AahAnnouncerComponent
+  ],
+  exports: [
+    AahFocusFirstDirective,
+    AahAnnouncerComponent
+  ],
+  entryComponents: [AahAnnouncerComponent]
 })
 export class AngularA11yHelpersModule { }

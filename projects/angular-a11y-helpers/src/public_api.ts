@@ -3,4 +3,12 @@
  */
 
 export * from './lib/angular-a11y-helpers.module';
-export * from './lib/directives/aah-focus-first.directive';
+
+// Components
+export * from './lib/components/announcer/announcer.component';
+
+// Directives
+export * from './lib/directives/focus-first.directive';
+
+// Services
+export * from './lib/services/announcer.service';
