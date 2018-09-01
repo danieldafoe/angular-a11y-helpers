@@ -1,5 +1,7 @@
 # angular-a11y-helpers
 
+[![CircleCI](https://circleci.com/gh/danieldafoe/angular-a11y-helpers/tree/develop.svg?style=svg)](https://circleci.com/gh/danieldafoe/angular-a11y-helpers/tree/develop)
+
 ## Usage
 
 `npm install angular-a11y-helpers`
