@@ -1,6 +1,6 @@
 {
   "name": "angular-a11y-helpers",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Helpful directives and components that improve accessibility in Angular applications.",
   "keywords": [
     "a11y",
